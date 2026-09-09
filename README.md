@@ -43,6 +43,9 @@ credential_proof = "P2." + HMAC-SHA256(
 │   ├── 01-抓包通关记录.md          # SSL Pinning / 风控门控 / 验签三道墙的拆除全程
 │   ├── 02-proof算法还原记录.md     # 三层 HMAC 链还原 + POST 登录攻坚 + 全部踩坑
 │   └── 03-从MD5到HMAC-学习全历程.md # 前置关卡 v1→v4 的能力爬坡记录（Notion 笔记精选）
+├── lab/                            # 可运行靶场：任何人可本地复现（详见 lab/README.md）
+│   ├── MiniPay-Pro-Lab.apk         # 目标应用（Release + R8 混淆 + 三 ABI）
+│   └── server/                     # 自包含 Windows 服务端，双击 start-server.bat 即用
 └── client/                         # 自研工具脚本（全部脱敏，仅含实验室内网地址与测试账号）
     ├── minipay_final.js            # 最终版 Frida 脚本：TLS 信任置换 + 电表归零（两个 hook 通关）
     ├── self_minipay.js             # 黄金向量采集 + Native HMAC 现场验证脚本
